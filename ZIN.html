@@ -1,26 +1,61 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-    <meta charset="UTF-8">
-    <title>FAN of ART</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ZIN · FAN of ART · nr 1</title>
+    <meta name="description" content="Zin społeczności Fan of Art">
 </head>
 <body>
     <header>
         <h1>Fan of art</h1>
-        <nav>
+    </header>
+    <nav>
             <ul>
-                <li a href="">Artykuł</li>
-                <li a href="">Ramka</li>
-                <li a href="">5 rzeczy</li>
-                <li a href="">Grafik</li>
-                <li a href="">Kupon</li>
+                <li><a href="#artykul">Artykuł</a></li>
+                <li><a href="#btw">Ramka</a></li>
+                <li><a href="#new">Nowi członkowie</a></li>
+                <li><a href="#grafik">Grafik</a></li>
+                <li><a href="#formularz">Formularz</a></li>
             </ul>
         </nav>
-    </header>
-<h2>Artykuł</h2>
-<h2>Ramka</h2>
-<h2>5  rzeczy</h2>
-<h2>Grafik</h2>
-<h2>Kupon</h2>
+    <main>
+        <article id="artykul">
+            <h2>Jak to się zaczęło?</h2>
+            <p>Społeczność...</p>
+        </article>
+        <aside id="btw">
+            <h2>Artysta miesiąca</h2>
+            <p>Nickname zostal wybrany artysta miesiąca ze względu na...</p>
+        </aside>
+    </main>
+    <h2 id="new">Nowi członkowie</h2>
+        <ul>
+            <li>czlonek 1</li>
+                <p>opis członka i link do social media</p>
+            <li>czlonek 2</li>
+                <p>opis członka i link do social media</p>
+            <li>czlonek 3</li>
+                <p>opis członka i link do social media</p>
+            <li>czlonek 4</li>
+                <p>opis członka i link do social media</p>
+            <li>czlonek 5</li>
+                <p>opis członka i link do social media</p>
+        </ul>
+    <h2 id="grafik">Grafik</h2>
+    <h2 id="formularz">Formularz</h2>
+        <form action="/zapisy" method="post">
+            <label for="mail">E-mail</label>
+            <input id="social_media">Sociale<type="text">
+            <input id="mail" name="mail" type="email" required>
+            <label for="dzien">Dzień</label>
+            <input id="dzien" name="dzien" type="date">
+            <button type="submit">Zapisz mnie</button>
+        </form>
+
+    <footer>
+        <p>Zin społeczności Fan of Art</p>
+        <p>Caro 2026</p>
+    </footer>
 </body>
 </html>
