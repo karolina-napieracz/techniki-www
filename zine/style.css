@@ -1,7 +1,34 @@
-main {
-    display: flex;
+/* telefon: jedna kolumna */
+body { 
+    display: grid; 
+    gap: 1rem; 
+    grid-template-columns: minmax(0,1fr);
 }
 
-aside{
-    justify-content: flex-end;
+article,aside,section {
+    padding: 1rem;
+    background-color:rgb(216, 216, 216);
+
+}
+
+.prace{
+    display: grid; 
+    gap: 1rem;
+    grid-template-columns: minmax(0,1fr);
+}
+.prace img{
+    display: block;
+    width:50%;
+    max-width:20rem;
+    height: auto;
+}
+
+/* od 48rem, czyli 768 px */
+@media (min-width: 48rem) {
+
+    article,aside,section {
+    padding: 1rem;
+    background-color:rgb(230, 152, 152);
+    
+}
 }
