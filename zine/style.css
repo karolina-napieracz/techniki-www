@@ -15,11 +15,12 @@ article,aside,section {
     display: grid; 
     gap: 1rem;
     grid-template-columns: minmax(0,1fr);
+    justify-items: center;
 }
 .prace img{
     display: block;
-    width:50%;
-    max-width:20rem;
+    width:100%;
+    max-width:28rem;
     height: auto;
 }
 
