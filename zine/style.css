@@ -1,0 +1,7 @@
+main {
+    display: flex;
+}
+
+aside{
+    justify-content: flex-end;
+}
