@@ -1,86 +1,136 @@
-/* telefon: jedna kolumna */
 * {
     box-sizing: border-box;
 }
 
 body {
     display: grid;
-    gap: 1rem;
     grid-template-columns: minmax(0, 1fr);
+    gap: 1rem;
     margin: 0;
     padding: 1rem;
     background-color: #e0e0e0;
+    font-family: "Inter", system-ui, Arial, sans-serif;
+    font-size: 1.125rem;
+    line-height: 1.6;
 }
 
-main { display: contents; }
-
-header, nav, article, aside, section, footer {
-    max-width: 40rem;
-    margin-inline: auto;
-    width: 100%;
-}
-article,aside,section {
-    padding: 1rem;
-    background-color:white;
+h1, h2 {
+    font-family: "Space Grotesk", system-ui, Arial, sans-serif;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    line-height: 1.2;
 }
 
-.prace{
-    display: grid; 
-    gap: 1rem;
-    grid-template-columns: minmax(0,1fr);
-    justify-items: center;
-}
-.prace img{
-    display: block;
-    width:100%;
-    max-width:28rem;
-    height: auto;
-}
 h1 {
+    font-size: 2.5rem;
     color: #800020;
 }
-h2{
+
+h2 {
+    font-size: 1.75rem;
     color: #5c0017;
 }
-/* od 48rem, czyli 768 px */
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a:focus-visible {
+    outline: 3px solid #000;
+    outline-offset: 3px;
+}
+
+main {
+    display: contents;
+}
+
+header, nav, article, aside, section, footer {
+    width: 100%;
+    max-width: 40rem;
+    margin-inline: auto;
+}
+
+article, aside, section {
+    padding: 1rem;
+    background-color: white;
+}
+
+.prace {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1rem;
+    justify-items: center;
+}
+
+.prace img {
+    display: block;
+    width: 100%;
+    max-width: 28rem;
+    height: auto;
+}
+
 @media (min-width: 48rem) {
     body {
         max-width: 100rem;
         margin-inline: auto;
         grid-template-columns: 2fr 1fr;
         grid-template-areas:
-            "naglowek   naglowek"
-            "menu       menu"
-            "artykul    ramka"
+            "naglowek naglowek"
+            "menu menu"
+            "artykul ramka"
             "czlonkowie ramka"
-            "formularz  grafik"
-            "stopka     stopka";
+            "formularz grafik"
+            "stopka stopka";
         align-items: start;
     }
-    header     { grid-area: naglowek; }
-    nav        { grid-area: menu; }
-    #artykul   { grid-area: artykul; }
-    #btw       { grid-area: ramka; }
-    #new       { grid-area: czlonkowie; }
-    #formularz { grid-area: formularz; }
-    #grafik    { grid-area: grafik; }
-    footer     { grid-area: stopka; }
+
+    header {
+        grid-area: naglowek;
+    }
+
+    nav {
+        grid-area: menu;
+    }
+
+    #artykul {
+        grid-area: artykul;
+    }
+
+    #btw {
+        grid-area: ramka;
+    }
+
+    #new {
+        grid-area: czlonkowie;
+    }
+
+    #formularz {
+        grid-area: formularz;
+    }
+
+    #grafik {
+        grid-area: grafik;
+    }
+
+    footer {
+        grid-area: stopka;
+    }
 
     header, nav, article, aside, section, footer {
         max-width: 900px;
     }
+
     header, nav {
         max-width: none;
         margin-inline: 0;
     }
-    /* zdjęcia 2×2 */
+
     .prace {
         grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-    h1 {
-        color: #800020;
-    }
-    h2{
-        color: #5c0017;
     }
 }
