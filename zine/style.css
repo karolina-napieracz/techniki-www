@@ -1,14 +1,27 @@
 /* telefon: jedna kolumna */
-body { 
-    display: grid; 
-    gap: 1rem; 
-    grid-template-columns: minmax(0,1fr);
+* {
+    box-sizing: border-box;
 }
 
+body {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: minmax(0, 1fr);
+    margin: 0;
+    padding: 1rem;
+    background-color: #e0e0e0;
+}
+
+main { display: contents; }
+
+header, nav, article, aside, section, footer {
+    max-width: 40rem;
+    margin-inline: auto;
+    width: 100%;
+}
 article,aside,section {
     padding: 1rem;
-    background-color:rgb(216, 216, 216);
-
+    background-color:white;
 }
 
 .prace{
@@ -23,13 +36,51 @@ article,aside,section {
     max-width:28rem;
     height: auto;
 }
-
+h1 {
+    color: #800020;
+}
+h2{
+    color: #5c0017;
+}
 /* od 48rem, czyli 768 px */
 @media (min-width: 48rem) {
+    body {
+        max-width: 100rem;
+        margin-inline: auto;
+        grid-template-columns: 2fr 1fr;
+        grid-template-areas:
+            "naglowek   naglowek"
+            "menu       menu"
+            "artykul    ramka"
+            "czlonkowie ramka"
+            "formularz  grafik"
+            "stopka     stopka";
+        align-items: start;
+    }
+    header     { grid-area: naglowek; }
+    nav        { grid-area: menu; }
+    #artykul   { grid-area: artykul; }
+    #btw       { grid-area: ramka; }
+    #new       { grid-area: czlonkowie; }
+    #formularz { grid-area: formularz; }
+    #grafik    { grid-area: grafik; }
+    footer     { grid-area: stopka; }
 
-    article,aside,section {
-    padding: 1rem;
-    background-color:rgb(230, 152, 152);
-    
-}
+    header, nav, article, aside, section, footer {
+        max-width: 900px;
+    }
+    header, nav {
+        max-width: none;
+        margin-inline: 0;
+    }
+    /* zdjęcia 2×2 */
+    .prace {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    h1 {
+        color: #800020;
+    }
+    h2{
+        color: #5c0017;
+    }
 }
